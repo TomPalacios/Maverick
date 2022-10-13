@@ -1,0 +1,491 @@
+
+/* Formato y Diseño */
+
+.cards{
+    height: 510px;
+    width: 250px;
+    /* border: solid;
+    border-width: 1px; */
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px 40px 20px;
+    display: grid;
+    grid-template-rows: 20px 40px 1fr 40px;
+    
+
+    /* Diseño */
+    /* box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px); */
+
+    /* Flip-Card */
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    backface-visibility: hidden;
+}
+
+
+
+.front{
+    height: 510px;
+    width: 250px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px 40px 20px;
+    display: grid;
+    grid-template-rows: 200px 40px 1fr 40px;
+
+    position: absolute;
+    
+    /* Diseño */
+    box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    
+    /* Flip Card */
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+}
+
+.back{
+    height: 510px;
+    width: 250px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    align-items: center;
+    padding: 30px 20px 40px 20px;
+    display: grid;
+    grid-template-rows:60px 1fr 40px;
+
+    position: absolute;
+
+    /* Diseño */
+    box-shadow: 20px 20px 50px rgba(17, 8, 138, 0.5);
+    background: rgba(60, 9, 117, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    /* Flip Card */
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+}
+
+
+
+
+.image_card{
+    max-height: 200px;
+    max-width: 100%;
+    margin: 0px;
+    justify-content: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    /* margin-top: 20px; */
+    color: #fff;
+}
+
+.text{
+    align-self: baseline;
+    text-align: left;
+    padding: 0px 10px;
+}
+
+.cards p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.cards__bt{
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: var(--bg-card);
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.507);
+}
+
+.text_card_bt{
+    margin: 0px;
+}
+
+
+
+.cover__card{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cover__card img{
+    width: 110%;
+    transition: all 300ms;
+}
+
+.cards:hover{
+    transform: translateY(-15px);
+}
+
+.cards:hover .cover__card img{
+    transform: scale(1.1);
+}
+
+.cards__bt:hover{
+    text-shadow: 0 0 5px rgb(255, 255, 255)
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------- FLIP CARD -------------------------------------- */
+
+
+input[name="change"]{
+    display: none;
+}
+
+/* -------------------- Card 1 -------------------- */
+
+input[id='chk1']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk1']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+/* input[id="chk1"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+} */
+
+label[for="chk1"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 2 -------------------- */
+
+input[id='chk2']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk2']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+/* input[id="chk2"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+} */
+
+label[for="chk2"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 3 -------------------- */
+
+input[id='chk3']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk3']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+/* input[id="chk3"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+} */
+
+label[for="chk3"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 4 -------------------- */
+
+input[id='chk4']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk4']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk4"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk4"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 5 -------------------- */
+
+input[id='chk5']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk5']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk5"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk5"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 6 -------------------- */
+
+input[id='chk6']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk6']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk6"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk6"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 7 -------------------- */
+
+input[id='chk7']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk7']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk7"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk7"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 8 -------------------- */
+
+input[id='chk8']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk8']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk8"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk8"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 9 -------------------- */
+
+input[id='chk9']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk9']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk9"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk9"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 10 -------------------- */
+
+input[id='chk10']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk10']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk10"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk10"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 11 -------------------- */
+
+input[id='chk11']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk11']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk11"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk11"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 12 -------------------- */
+
+input[id='chk12']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk12']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk12"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk12"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 13 -------------------- */
+
+input[id='chk13']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk13']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk13"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk13"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 14 -------------------- */
+
+input[id='chk14']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk14']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk14"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk14"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 15 -------------------- */
+
+input[id='chk15']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk15']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk15"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk15"]{
+
+    cursor: pointer;
+}
+
+/* -------------------- Card 16 -------------------- */
+
+input[id='chk16']:checked ~ .front{
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+input[id='chk16']:checked ~ .back{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+input[id="chk16"]:checked ~ .front{
+
+    transform: rotateY(-180deg);
+}
+
+label[for="chk16"]{
+
+    cursor: pointer;
+}

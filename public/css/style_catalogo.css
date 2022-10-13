@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --padding-container: 100px 0;
+    --color-title: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #212025;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 0px;
+    color: var(--color-title);
+}
+
+
+
+/* Main */
+
+main{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 2.5em;
+    padding: 80px 50px;     /*padding: 100px 50px*/
+    justify-items: center;
+}
+
+
+
+/* Aside container */
+
+.aside__container{
+    width: 210px;
+    height: 330px;
+    padding: 20px 20px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #393939;
+    border-width: 2px;
+}
+
+.filter__container{
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    align-items: center;
+}
+
+.filter__container h4{
+    padding: 0px 25px;
+}
+
+.filter__elements{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1.3em;
+    padding-top: 10px;
+}
+
+.category{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: baseline;
+    color: rgb(255, 255, 255);
+}
+
+input{
+    margin-top: 6px;
+}
+
+
+
+/* weapons container */
+
+.weapons__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em 3em;
+    justify-content: center;
+    /* padding-top: 10px; */
+    
+}
+
+
+
+
+
+
+
+
+@media (max-width:900px){
+   
+    main{
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .aside__container{
+        display: var(--show, none);
+    }
+}
+
+@media (max-width:800px){
+    
+    .aside__container{
+        display: var(--show, none);
+    }
+
+
+    .cards{
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:600px){
+    .weapons__container{
+        display: block;
+    }
+
+    .cards{
+        margin-bottom: 3em;
+        /* grid-template-columns: repeat(autofit, minmax(min,max)); */
+    }
+
+
+}
+
